@@ -1,0 +1,46 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color:  #301934;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.footer{
+	background-color: #a2c8ec;
+	font-weight: bold;
+}
+
+.navbar{
+	background-color: #a2c8ec;
+	font-weight: bold;;
+	color: #301934;
+}
+
+
+.title{
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 50px;
+	background:  linear-gradient(90deg, #f9b0c3, #ceb6d9);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px #301934;
+
+}
+
+.form-group{
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+#registerUser{
+	background:  linear-gradient(90deg, #f9b0c3, #ceb6d9);
+	padding: 20px;
+	border:2px solid #301934;
+}
+
+.btn{
+	background: #301934;
+	color: #f9b0c3;
+}

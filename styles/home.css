@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color:  #301934;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.footer{
+	background-color: #a2c8ec;
+	font-weight: bold;
+	position: relative;
+}
+
+.navbar{
+	background-color: #a2c8ec;
+	font-weight: bold;;
+	color: #301934;
+}
+
+.container-fluid{
+	margin:  20px;
+	padding:  10px;
+	justify-content: center;
+}
+
+.jumbotron{
+	background-color: #ffffffff;
+	margin: 20px;
+	padding: 10px;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+}
+
+.display-3{
+	font-weight: 900;
+	background:  linear-gradient(90deg, #f9b0c3, #ceb6d9);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px #301934;
+
+}
+
+.description{
+	font-weight: bold;
+	font-size:  20px;
+	padding: 20px;
+	margin:  20px;
+}
+.homeSignUp{
+	background: #301934;
+	color: #f9b0c3;
+	border-color: #301934;
+	font-weight: bold;
+	font-style: italic;
+	padding: 20px;
+	border: 20px;
+	margin:  20px;
+}
