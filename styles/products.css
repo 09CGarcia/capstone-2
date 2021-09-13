@@ -21,6 +21,10 @@ nav{
 	color: #301934;
 }
 
+.card-body{
+	background:  linear-gradient(90deg, #f9b0c3, #ceb6d9);
+}
+
 .display-4{
 	font-weight: 900;
 	text-transform: uppercase;

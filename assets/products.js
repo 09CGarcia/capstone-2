@@ -7,7 +7,7 @@ if(!admin){
 } else {
 	adminButton.innerHTML =
 	`
-		<div class="col-md-2" id="cpButton">
+		<div class="col-12" id="cpButton">
 			<a href="./createProduct.html" class="btn">Create Product
 			</a>
 		</div>
@@ -64,11 +64,11 @@ fetch("https://young-peak-11745.herokuapp.com/api/products/allProducts",
 			// map images
 			return(
 				`
-				<div class="col-12 col-md-6 my-5 inline-block">
+				<div class="card-container col-12 col-md-6 my-5 inline-block">
 					<div class="card">
 						<div class="card-body">
 							<center>
-							<img src="../albumcover/${product.image}" width="250" class="img-fluid" ></center>
+							<img src="../albumcover/${product.image}" width="250" class="image img-fluid"></center>
 							<h5 class="card-title mt-5">
 								${product.name}
 							</h5>

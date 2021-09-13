@@ -6,10 +6,17 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+#bgcon {
+background-color: #f9f9ff;
+opacity: 1;
+background: repeating-linear-gradient( 45deg, #d2d4ff, #d2d4ff 5px, #f9f9ff 5px, #f9f9ff 25px );}
+
 .footer{
 	background-color: #a2c8ec;
+}
+
+.footer__head{
 	font-weight: bold;
-	/*position: relative;*/
 }
 
 .navbar{
@@ -24,11 +31,18 @@
 	justify-content: center;
 }
 
-.jumbotron{
-	background-color: #ffffffff;
-	/*margin: 20px;*/
-	display:  d-flex;
+h1 {
+	opacity: 100%;
 }
+
+.jumbotron{
+	 background: url("./../picref/bg.jpg") no-repeat center center; 
+	 height: 100%;
+	 width: 100%;
+	 display: inline-block;
+	 min-height: 478px;
+}
+
 
 .row {
 	display: flex;
@@ -64,17 +78,65 @@
 
 @media (min-width: 320px){
 	.display-4{
-		font-size: 40px;
+		font-size: 25px;
 	}
 	.description{
 		margin: 0px;
 		padding: 0px;
+		font-size: 15px;
 	}
 	.homeSignUp{
 		display: inline-block;
 		margin-top: 30px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 	#carouselId{
 		margin-top: 20px;
+	}
+	.icon {
+		padding-left: 10px;
+		width: 50px;
+	}
+
+	.jumbotron {
+		min-height: 300px;
+	}
+	.footer__head {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 768px){
+	.display-4{
+			font-size: 60px;
+		}
+		.description{
+			margin: 0px;
+			padding: 0px;
+			font-size: 40px;
+		}
+		.homeSignUp{
+			display: inline-block;
+			margin-top: 40px;
+			padding-top: 20px;
+			padding-bottom: 10px;
+			font-size: 20px;
+		}
+		#carouselId{
+			margin-top: 20px;
+		}
+		.icon {
+			padding-left: 20px;
+			width: 100px;
+		}
+
+		.jumbotron {
+			min-height: 500px;
+
+		}
+		.footer__head {
+			font-size: 20px;
+		}
 	}
 }
