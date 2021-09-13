@@ -4,7 +4,7 @@ let productId = params.get('productId')
 
 let token = localStorage.getItem('token')
 
-let productImage = document.querySelector('#imageName').value
+let productImage = document.querySelector('#imageName');
 let productName = document.querySelector('#productName');
 let productPrice = document.querySelector('#productPrice');
 let productDesc = document.querySelector('#productDesc');
@@ -43,7 +43,6 @@ editProduct.addEventListener("submit", (e) => {
 				"Authorization": `Bearer ${token}`
 		},
 		body: JSON.stringify({
-
 			image: productImage,
 			name: productName,
 			description: productDesc,
