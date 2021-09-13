@@ -3,9 +3,6 @@ let createProduct = document.querySelector('#createProduct')
 createProduct.addEventListener("submit", (e) => {
 	e.preventDefault()
 
-						// <div class="form-group col-md-12">
-						// 	<input type="text" id="imageName" placeholder="Add Image Name" class="form-control" required="">
-						// </div>
 	let productImage = document.querySelector('#imageName').value
 	let productName = document.querySelector('#productName').value
 	let productPrice = document.querySelector('#productPrice').value

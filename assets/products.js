@@ -64,12 +64,12 @@ fetch("https://young-peak-11745.herokuapp.com/api/products/allProducts",
 			// map images
 			return(
 				`
-				<div class="col-md-6 my-5">
+				<div class="col-12 col-md-6 my-5 inline-block">
 					<div class="card">
 						<div class="card-body">
 							<center>
 							<img src="../albumcover/${product.image}" width="250" class="img-fluid" ></center>
-							<h5 class="card-title">
+							<h5 class="card-title mt-5">
 								${product.name}
 							</h5>
 							<p class="card-text text-left"> 

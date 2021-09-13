@@ -4,6 +4,7 @@ let productId = params.get('productId')
 
 let token = localStorage.getItem('token')
 
+let productImage = document.querySelector('#imageName').value
 let productName = document.querySelector('#productName');
 let productPrice = document.querySelector('#productPrice');
 let productDesc = document.querySelector('#productDesc');
@@ -18,8 +19,9 @@ fetch(`https://young-peak-11745.herokuapp.com/api/products/getProduct/${productI
 )
 .then(result => result.json())
 .then(result => {
-	console.log(result)
+	// console.log(result)
 
+	productImage.value = result.image
 	productName.value = result.name
 	productPrice.value = result.price
 	productDesc.value = result.description
@@ -28,6 +30,7 @@ fetch(`https://young-peak-11745.herokuapp.com/api/products/getProduct/${productI
 editProduct.addEventListener("submit", (e) => {
 	e.preventDefault(e)
 
+	productImage = productImage.value
 	productName = productName.value
 	productDesc = productDesc.value
 	productPrice = productPrice.value
@@ -40,6 +43,8 @@ editProduct.addEventListener("submit", (e) => {
 				"Authorization": `Bearer ${token}`
 		},
 		body: JSON.stringify({
+
+			image: productImage,
 			name: productName,
 			description: productDesc,
 			price: productPrice
