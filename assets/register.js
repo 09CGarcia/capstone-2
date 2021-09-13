@@ -10,7 +10,7 @@ registerForm.addEventListener('submit', (e) => {
 	let confirmPassword = document.querySelector('#confirmPassword').value;
 
 	if(password === confirmPassword && password !== "" && confirmPassword !== ""){
-		fetch("http://localhost:3000/api/users/emailExists",
+		fetch("https://young-peak-11745.herokuapp.com/api/users/emailExists",
 			{
 				method: "POST",
 				headers: {
@@ -24,7 +24,7 @@ registerForm.addEventListener('submit', (e) => {
 		.then(result => result.json())
 		.then(result => {
 			if(result === false){
-				fetch("http://localhost:3000/api/users/register",
+				fetch("https://young-peak-11745.herokuapp.com/api/users/register",
 					{
 						method: "POST",
 						headers: {
@@ -42,15 +42,15 @@ registerForm.addEventListener('submit', (e) => {
 				.then(result => result.json())
 				.then(result => {
 					if(result === true){
-						alert('Welcome to 2! 3! 쇼핑');
+						alert('Welcome to 2! 3! 가게');
 						
 						window.location.replace('./login.html');
 					} else {
-						alert('Something went wrong. Please check your details.');
+						alert('죄송합니다! Something went wrong.');
 					}
 				})
 			}  else {
-				alert(`The email you're trying to register already exists.`)
+				alert(`죄송합니다! The email you're trying to register already exists.`)
 			}
 		})
 	}

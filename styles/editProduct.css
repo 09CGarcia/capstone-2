@@ -36,3 +36,12 @@
 	font-weight: bold;
 	text-transform: capitalize;
 }
+
+@media (min-width: 320px){
+	#scButton{
+		display: inline-block;
+		margin-bottom: 30px;
+		
+	}
+	
+}

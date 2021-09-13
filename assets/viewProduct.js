@@ -8,9 +8,10 @@ let productName = document.querySelector('#productName');
 let productDesc = document.querySelector('#productDesc');
 let productPrice = document.querySelector('#productPrice');
 let productContainer = document.querySelector('#productContainer')
+// let imageContainer = document.querySelector('#imageContainer')
 let token = localStorage.getItem('token');
 
-fetch(`http://localhost:3000/api/products/getProduct/${productId}`, 
+fetch(`https://young-peak-11745.herokuapp.com/api/products/getProduct/${productId}`, 
 		{
 			method: "GET",
 			headers: {
@@ -22,13 +23,15 @@ fetch(`http://localhost:3000/api/products/getProduct/${productId}`,
 .then(result => {
 
 	productName.innerHTML = result.name
+
 	productDesc.innerHTML = result.description
 	productPrice.innerHTML = result.price
-	// orderQuantity.innerHTML = result.quantity
-
+	
 	productContainer.innerHTML = `
+		<center><img src="../albumcover/${result.image}" width="250" ></center>
 		<button class="btn btn-block" id="orderButton">Order Now!</button>
 	`
+	
 	let orderButton = document.querySelector('#orderButton');
 	orderButton.addEventListener("click", () => {
 	let orderQuantity = parseInt(document.getElementById("quantity").value)
@@ -53,10 +56,10 @@ fetch(`http://localhost:3000/api/products/getProduct/${productId}`,
 			console.log(result)
 
 			if(result){
-				alert(`Order Placed!`)
+				alert(`축하해! Order Placed!`)
 				window.location.replace('./products.html')
 			} else {
-				alert(`Something went wrong.`)
+				alert(`죄송합니다! Something went wrong.`)
 			}
 		})
 	})

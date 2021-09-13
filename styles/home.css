@@ -26,8 +26,8 @@
 
 .jumbotron{
 	background-color: #ffffffff;
-	margin: 20px;
-	padding: 10px;
+	/*margin: 20px;*/
+	display:  d-flex;
 }
 
 .row {
@@ -35,7 +35,7 @@
 	justify-content: center;
 }
 
-.display-3{
+.display-4{
 	font-weight: 900;
 	background:  linear-gradient(90deg, #f9b0c3, #ceb6d9);
 	-webkit-background-clip: text;
@@ -59,4 +59,22 @@
 	padding: 20px;
 	border: 20px;
 	margin:  20px;
+}
+
+
+@media (min-width: 320px){
+	.display-4{
+		font-size: 40px;
+	}
+	.description{
+		margin: 0px;
+		padding: 0px;
+	}
+	.homeSignUp{
+		display: inline-block;
+		margin-top: 30px;
+	}
+	#carouselId{
+		margin-top: 20px;
+	}
 }

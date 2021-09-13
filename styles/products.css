@@ -8,6 +8,7 @@
 
 .footer{
 	background-color: #a2c8ec;
+	font-weight: bold;
 }
 
 .footer__head{
@@ -40,6 +41,26 @@ nav{
 	color: #f9b0c3;
 }
 
+.btnArchive{
+	background: #ceb6d9;
+	color: #301934;
+}
+
+.btnUnarchive{
+	background: #fbcabb;
+	color: #301934;
+}
+
+.btnDelete{
+	background: #f9b0c3;
+	color: #301934;
+}
+
+.btnEdit{
+	background: #e3abce;
+	color: #301934;
+}
+
 .jumbotron{
 	background-color: white;
 }
@@ -52,3 +73,9 @@ nav{
 	text-transform: capitalize;
 }
 
+@media (min-width: 320px){
+	#cpButton{
+		padding-left: 0px;
+	}
+	
+}

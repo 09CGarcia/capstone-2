@@ -2,7 +2,7 @@ let params = new URLSearchParams(window.location.search);
 let productId = params.get('productId');
 let token = localStorage.getItem('token')
 
-fetch(`http://localhost:3000/api/products/archiveProduct/${productId}`, 
+fetch(`https://young-peak-11745.herokuapp.com/api/products/archiveProduct/${productId}`, 
 	{
 		method: "PUT",
 		headers: {
@@ -13,8 +13,9 @@ fetch(`http://localhost:3000/api/products/archiveProduct/${productId}`,
 .then(result => result)
 .then(result => {
 	if(result){
+		alert(`축하해! Product archived successfully!`)
 		window.location.replace("./products.html");
 	} else {
-		alert("Something went wrong.")
+		alert("죄송합니다! Something went wrong.")
 	}
 })

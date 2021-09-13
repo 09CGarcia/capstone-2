@@ -7,13 +7,13 @@ if(!admin){
 } else {
 	adminButton.innerHTML =
 	`
-		<div class="col-md-2 offset-md-10">
+		<div class="col-md-2" id="cpButton">
 			<a href="./createProduct.html" class="btn">Create Product
 			</a>
 		</div>
 	`
 }
-fetch("http://localhost:3000/api/products/allProducts", 
+fetch("https://young-peak-11745.herokuapp.com/api/products/allProducts", 
 	{
 		method: "GET",
 		headers: {
@@ -39,32 +39,36 @@ fetch("http://localhost:3000/api/products/allProducts",
 				if(product.isActive === true){
 					cardFooter =
 					`
-						<a href="./editProduct.html?productId=${product._id}" class="btn btn-block editButton">Edit Product</a>
+						<a href="./editProduct.html?productId=${product._id}" class="btnEdit btn-block text-center editButton">Edit Product</a>
 						
-						<a href="./archiveProduct.html?productId=${product._id}" class="btn btn-block archiveButton">Archive Product</a>
+						<a href="./archiveProduct.html?productId=${product._id}" class="btnArchive btn-block text-center archiveButton">Archive Product</a>
 						
-						<a href="./deleteProduct.html?productId=${product._id}" class="btn btn-block deleteButton">Delete Product</a>
+						<a href="./deleteProduct.html?productId=${product._id}" class="btnDelete btn-block text-center deleteButton">Delete Product</a>
 					`
 
 				} else {
 					cardFooter =
 					`
-						<a href="./editProduct.html?productId=${product._id}" class="btn btn-block editButton">Edit Product</a>
+						<a href="./editProduct.html?productId=${product._id}" class="btnEdit btn-block text-center editButton">Edit Product</a>
 
-						<a href="./unarchiveProduct.html?productId=${product._id}" class="btn btn-block unarchiveButton">
+						<a href="./unarchiveProduct.html?productId=${product._id}" class="btnUnarchive btn-block text-center unarchiveButton">
 							Unarchive Product </a>
-						<a href="./deleteProduct.html?productId=${product._id}" class="btn btn-block deleteButton">
+						
+						<a href="./deleteProduct.html?productId=${product._id}" class="btnDelete btn-block text-center deleteButton">
 							Delete Product </a>
 					`
 
 				}
 			}
 
+			// map images
 			return(
 				`
 				<div class="col-md-6 my-5">
 					<div class="card">
 						<div class="card-body">
+							<center>
+							<img src="../albumcover/${product.image}" width="250" class="img-fluid" ></center>
 							<h5 class="card-title">
 								${product.name}
 							</h5>
@@ -72,7 +76,7 @@ fetch("http://localhost:3000/api/products/allProducts",
 								${product.description}
 							</p>
 							<p class="card-text text-right">
-								${product.price}
+								₱ ${product.price}
 							</p>
 						</div>
 						<div class="card-footer">

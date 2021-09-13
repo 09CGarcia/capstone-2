@@ -7,9 +7,9 @@ loginUser.addEventListener("submit", (e) => {
 	let password = document.querySelector('#password').value
 
 	if(email === "" || password === ""){
-		alert('Oops! Your email or password is missing.')
+		alert('죄송합니다! Your email or password is missing.')
 	} else {
-		fetch("http://localhost:3000/api/users/login", 
+		fetch("https://young-peak-11745.herokuapp.com/api/users/login", 
 			{
 				method: "POST",
 				headers: {
@@ -26,7 +26,7 @@ loginUser.addEventListener("submit", (e) => {
 			localStorage.setItem("token", result.access);
 			let token = result.access
 			if(token){
-				fetch("http://localhost:3000/api/users/details", 
+				fetch("https://young-peak-11745.herokuapp.com/api/users/details", 
 					{
 						method: "GET",
 						headers: {
@@ -41,6 +41,8 @@ loginUser.addEventListener("submit", (e) => {
 
 					window.location.replace('./products.html')
 				})
+			} else {
+				alert(`죄송합니다! Your email and password does not match`)
 			}
 		})
 	}

@@ -7,14 +7,14 @@ if(userToken == ""){
 	navSession.innerHTML = 
 	`
 		<li class="nav-item">
-			<a href="./login.html" class="nav-link">Sign In</a>
+			<a href="./pages/login.html" class="nav-link">Sign In</a>
 		</li>
 	`
 
 	registerLink.innerHTML =
 	`
 		<li class="nav-item">
-			<a href="./register.html" class="nav-link">Register</a>
+			<a href="./pages/register.html" class="nav-link">Register</a>
 		</li>
 	`
 } else {
