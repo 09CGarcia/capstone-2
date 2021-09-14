@@ -36,7 +36,7 @@ fetch(`https://young-peak-11745.herokuapp.com/api/products/getProduct/${productI
 	orderButton.addEventListener("click", () => {
 	let orderQuantity = parseInt(document.getElementById("quantity").value)
 		console.log(orderQuantity)
-		fetch(`http://localhost:3000/api/users/newOrder`,
+		fetch(`https://young-peak-11745.herokuapp.com/api/users/newOrder`,
 			{
 				method: "POST",
 				headers: {
